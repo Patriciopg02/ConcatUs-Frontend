@@ -1,0 +1,77 @@
+.user {
+    height: fit-content;
+    border-radius: 140px;
+}
+
+.userInfo {
+    font-family: 'Nunito';
+    font-size: 20px;
+    padding-top: 10px;
+    flex-direction: column;
+}
+
+.profile-info-list{
+    max-width: 250px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.profile-info-list-li{
+    max-width: 250px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.userCard {
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userPlusInfo {
+    font-size: 17px;
+}
+
+.userPlusInfo p {
+    display: flex;
+    justify-content: center;
+    margin: 1px
+}
+
+.plus {
+    margin-top: 1px;
+    border-top: 1px solid rgba(0, 0, 0, 0.205);
+    padding-top: 7px
+}
+
+.plusText {
+    color:rgba(240, 255, 25, 0.5);
+    font-size: 13px; 
+}
+
+.followers {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    padding-top: 7px
+}
+
+.banContainerProfile {
+    margin-bottom: 10px;
+}
+
+@media (max-width:600px) {
+    .userCard img {
+        width: 160px;
+    }
+}

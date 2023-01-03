@@ -1,0 +1,44 @@
+
+export const GET_POSTS = 'GET_POSTS';
+export const SEARCH_BY_NAME ="SEARCH_BY_NAME"
+export const GET_EVENTS = 'GET_EVENTS'
+export const GET_DETAILS = 'GET_DETAILS'
+export const DETAILS_EVENT = 'DETAILS_EVENT'
+export const GET_USER_FOR_ID = "GET_USER_FOR_ID"
+export const GET_MY_USER = "GET_MY_USER"
+export const UPDATE_POSTS = "UPDATE_POSTS";
+export const GET_POSTS_BY_NAME = "GET_POSTS_BY_NAME"
+export const GET_POSTS_BY_ID = "GET_POSTS_BY_ID"
+export const UPDATE_COMMENT = "UPDATE_COMMENT"
+export const NEW_COMMENT = "NEW_COMMENT"
+export const GET_COMMENTS_POST = "GET_COMMENTS_POST"
+export const GET_POSTS_FOLLOW = "GET_POSTS_FOLLOW"
+export const ORDER_BY_LIKE = "ORDER_BY_LIKE"
+export const ORDER_BY_COMENTS = "ORDER_BY_COMENTS"
+export const GET_EVENT_PROFILE = "GET_EVENT_PROFILE"
+export const EVENTS_BY_AUTHOR = "EVENTS_BY_AUTHOR"
+export const FILTER_GLOBAL_EVENTS = "FILTER_GLOBAL_EVENTS"
+export const FILTER_EVE_LOC = "FILTER_EVE_LOC"
+export const FILTER_EVE_ASSIST = "FILTER_EVE_ASSIST"
+export const CLEAR_EVENTS = "CLEAR_EVENTS"
+export const FAVORITE = "FAVORITE"
+export const GET_OPINIONS = "GET_OPINIONS"
+export const NEW_OPINION = "NEW_OPINION"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
