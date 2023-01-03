@@ -95,7 +95,7 @@ const LandingPage = () => {
         />
         <img src={logogrande2} id='logoLanding' alt='logo'/>
         <Grid className='form' item component={Paper} elevation={6} square>
-        {window.location.href === `http://localhost:3000/` ?
+        {window.location.href === `https://concat-us.vercel.app/` ?
         <LandingLogin /> : <LandingRegister/>
         }
         {window.location.href === `https://concat-us.vercel.app/` ?
