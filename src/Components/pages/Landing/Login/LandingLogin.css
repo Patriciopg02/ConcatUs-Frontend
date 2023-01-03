@@ -1,7 +1,72 @@
+.loginForm {
+    width: 25vw;
+    min-width: 25vw;
+    max-width: 25vw;
+    height: 22vw;
+    max-height: 22vw;
+    min-height: 22vw;
+}
+
+.loginForm input {
+    width: 18vw;
+    height: 1vw;
+    padding: .5vw;
+    font-size: 1vw;
+}
+
+.loginForm button {
+    margin-left: 7vw;
+    padding: .5vw;
+    font-size: .7vw;
+    height: 2vw;
+}
+
 .loginForm h1 {
-    padding-left: 48px;
+    margin-left: 7vw;
+    font-size: 1.8vw;
 }
 
 .error {
+    font-size: .8vw;
     color: red;
+}
+
+@media (max-width:600px) {
+    .loginForm {
+        width: 70vw;
+        min-width: 70vw;
+        max-width: 70vw;
+        height:50vh;
+        max-height: 50vh;
+        min-height: 50vh;
+    }
+    
+    .loginForm input {
+        width: 62vw;
+        height: 4vh;    
+        padding: 2vw;
+        font-size: 4vw;
+    }
+    
+    .loginForm button {
+        margin-left: 24vw;
+        padding: 4vw;
+        font-size: 3.5vw;
+        height: 4vh;
+    }
+    
+    .loginForm h1 {
+        margin-left: 25vw;
+        font-size: 7vw;
+    }
+
+    .loginForm label {
+        font-size: 4vw;
+        padding: 2vw;
+    }
+    
+    .loginForm .error {
+        font-size: 4vw;
+        color: red;
+    }
 }

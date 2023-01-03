@@ -1,5 +1,4 @@
 import React,{ useEffect, useState } from 'react'
-import { useAuth0 } from "@auth0/auth0-react";
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import Link from '@mui/material/Link';
@@ -7,13 +6,9 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Home from "../Home/Home";
 import './LandingPage.css'
-import { grey, yellow } from '@mui/material/colors';
 import LandingLogin from './Login/LandingLogin';
 import LandingRegister from './Register/LandingRegister';
-import { useDispatch } from 'react-redux';
-import { login } from '../../../Redux/actions';
 import {useNavigate} from 'react-router-dom';
 import {useUserAuth} from '../../../context/UserAuthContext';
 import GoogleButton from 'react-google-button';
@@ -39,8 +34,6 @@ function Copyright(props) {
 const theme = createTheme();
 
 const LandingPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const { user, logIn, googleLogIn } = useUserAuth();
   const [opinions, setOpinions] = useState([]);
   const navigate = useNavigate();
@@ -56,7 +49,6 @@ const LandingPage = () => {
 
   useEffect(()=> {
     if (user) navigate('/home')
-
     const Config = {
       method: 'get',
       baseURL: `${process.env.REACT_APP_MY_API_URL}/opinions/getAllOpinions`,
@@ -95,18 +87,20 @@ const LandingPage = () => {
         />
         <img src={logogrande2} id='logoLanding' alt='logo'/>
         <Grid className='form' item component={Paper} elevation={6} square>
-        {window.location.href === `https://concat-us.vercel.app/` ?
-        <LandingLogin /> : <LandingRegister/>
+        {window.location.href === `${process.env.REACT_APP_MY_FRONT_URL}/` ?
+          <LandingLogin /> : <LandingRegister/>
         }
-        {window.location.href === `https://concat-us.vercel.app/` ?
-            <Button id='changeForm' onClick={() => navigate('/signup')}>
-            
-        Register </Button> : <Button id='changeForm' onClick={() => navigate('/')}>
-            
-            Login </Button>}
+        <p className='bottomButtons'>or</p>
+        {window.location.href === `${process.env.REACT_APP_MY_FRONT_URL}/` ?
+          <Button variant='outlined' className='bottomButtons' id='changeForm' onClick={() => navigate('/signup')}>
+            Register 
+          </Button> 
+          : <Button variant='outlined' className='bottomButtons' id='changeForm' onClick={() => navigate('/')}>
+              Login 
+          </Button>}
         
               
-            <GoogleButton onClick={handleGoogleButton}/>
+          <GoogleButton className='GoogleButton' onClick={handleGoogleButton}/>
         </Grid>
 
         {
@@ -115,15 +109,18 @@ const LandingPage = () => {
               <p id='TitleReviews'>User's Reviews</p>
               <div id='ReviewCard0'>
                   <Card sx={{bgcolor:'#dcdcdc'}}>
-                  <CardHeader
-                    sx={{ pt: "8px", color: "#000000" }}
+                  <CardHeader 
+                    sx={{ p:".5vw", color: "#000000" }}
                     avatar={
-                      <Avatar src={Three_opinions[0].avatar}>
+                      <Avatar 
+                      sx={{minWidth:'2vw',minHeight:'2vw',maxWidth:'2vw',maxHeight:'2vw'}}
+                      src={Three_opinions[0].avatar}>
                       </Avatar>
                     }
                     title={Three_opinions[0].name}
+                    titleTypographyProps={{fontSize:'.8vw'}}
                     subheader={Three_opinions[0].text}
-                    subheaderTypographyProps={{wordWrap: 'break-word', color:'#2a2a2a', maxWidth:'200px'}}
+                    subheaderTypographyProps={{wordWrap: 'break-word', color:'#2a2a2a', maxWidth:'15vw', fontSize:'1vw'}}
                   />
                 </Card>
               </div>
@@ -131,14 +128,17 @@ const LandingPage = () => {
               <div id='ReviewCard1'>
                   <Card sx={{bgcolor:'#dcdcdc'}}>
                   <CardHeader
-                    sx={{ pt: "8px", color: "#000000" }}
+                    sx={{ p: ".5vw", color: "#000000" }}
                     avatar={
-                      <Avatar src={Three_opinions[1].avatar}>
+                      <Avatar 
+                      sx={{minWidth:'2vw',minHeight:'2vw',maxWidth:'2vw',maxHeight:'2vw'}}
+                      src={Three_opinions[1].avatar}>
                       </Avatar>
                     }
                     title={Three_opinions[1].name}
+                    titleTypographyProps={{fontSize:'.8vw'}}
                     subheader={Three_opinions[1].text}
-                    subheaderTypographyProps={{wordWrap: 'break-word', maxWidth:'200px', color:'#2a2a2a'}}
+                    subheaderTypographyProps={{wordWrap: 'break-word', maxWidth:'200px', color:'#2a2a2a', fontSize:'1vw'}}
                   />
                 </Card>
               </div>
@@ -146,14 +146,17 @@ const LandingPage = () => {
               <div id='ReviewCard2'>
                   <Card sx={{bgcolor:'#dcdcdc'}}>
                   <CardHeader
-                    sx={{ pt: "8px", color: "#000000" }}
+                    sx={{ p: ".5vw", color: "#000000"}}
                     avatar={
-                      <Avatar src={Three_opinions[2].avatar}>
+                      <Avatar 
+                      sx={{minWidth:'2vw',minHeight:'2vw',maxWidth:'2vw',maxHeight:'2vw'}}
+                      src={Three_opinions[2].avatar}>
                       </Avatar>
                     }
                     title={Three_opinions[2].name}
+                    titleTypographyProps={{fontSize:'.8vw'}}
                     subheader={Three_opinions[2].text}
-                    subheaderTypographyProps={{wordWrap: 'break-word', maxWidth:'200px', color:'#2a2a2a'}}
+                    subheaderTypographyProps={{wordWrap: 'break-word', maxWidth:'200px', color:'#2a2a2a', fontSize:'1vw'}}
                   />
                 </Card>
               </div>

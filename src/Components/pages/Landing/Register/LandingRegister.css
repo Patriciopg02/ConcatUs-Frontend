@@ -1,7 +1,72 @@
+.registerForm {
+    width: 25vw;
+    min-width: 25vw;
+    max-width: 25vw;
+    height: 22vw;
+    max-height: 22vw;
+    min-height: 22vw;
+}
+
+.registerForm input {
+    width: 18vw;
+    height: 1vw;
+    padding: .5vw;
+    font-size: 1vw;
+}
+
+.registerForm button {
+    margin-left: 6.5vw;
+    padding: .5vw;
+    font-size: .7vw;
+    height: 2vw;
+}
+
 .registerForm h1 {
-    padding-left: 34px;
+    margin-left: 7vw;
+    font-size: 1.8vw;
 }
 
 .error {
+    font-size: .8vw;
     color: red;
+}
+
+@media (max-width:600px) {
+    .registerForm {
+        width: 70vw;
+        min-width: 70vw;
+        max-width: 70vw;
+        height:50vh;
+        max-height: 50vh;
+        min-height: 50vh;
+    }
+    
+    .registerForm input {
+        width: 62vw;
+        height: 4vh;    
+        padding: 1vw;
+        font-size: 4vw;
+    }
+    
+    .registerForm button {
+        margin-left: 20vw;
+        padding: 4vw;
+        font-size: 3.5vw;
+        height: 4vh;
+    }
+    
+    .registerForm h1 {
+        margin-left: 21vw;
+        font-size: 7vw;
+    }
+
+    .registerForm label {
+        font-size: 4vw;
+        padding: 2vw;
+    }
+    
+    .registerForm .error {
+        font-size: 3vw;
+        color: red;
+    }
 }

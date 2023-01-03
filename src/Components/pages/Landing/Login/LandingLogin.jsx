@@ -74,7 +74,7 @@ const LandingLogin = () => {
           <br />
           <Grid item md={12}>
             <FormControl>
-              <InputLabel htmlFor='email'>E-mail</InputLabel>
+              <InputLabel sx={{fontSize:'1vw'}} htmlFor='email'>E-mail</InputLabel>
               <Input 
               type='text'
               id='email'
@@ -82,7 +82,6 @@ const LandingLogin = () => {
               name="email"
               onChange={(e) => handleChangeEmail(e)}
               aria-describedby='email-helper'/>
-              <FormHelperText sx={{mb:2, color:grey[400]}} id='email-helper'>Your email</FormHelperText>
             </FormControl>
             {errors.hasOwnProperty("email") ? (
               <p className='error'>{errors.email}</p>
@@ -91,7 +90,7 @@ const LandingLogin = () => {
             <br/>
             <Grid item md={12} >
               <FormControl>
-                  <InputLabel htmlFor='pwd'>Password</InputLabel>
+                  <InputLabel sx={{fontSize:'1vw'}} htmlFor='pwd'>Password</InputLabel>
                   <Input 
                   type='password'
                   id='pwd'
@@ -99,7 +98,6 @@ const LandingLogin = () => {
                   name="password"
                   onChange={(e) => handleChange(e)}
                   aria-describedby='password-helper'/>
-                  <FormHelperText sx={{mb:2, color:grey[400]}} id='password-helper'>Your password</FormHelperText>
                 </FormControl>
                 {errors.hasOwnProperty("password") ? (
                   <p className='error'>{errors.password}</p>

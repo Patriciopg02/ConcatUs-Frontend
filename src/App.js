@@ -10,9 +10,8 @@ import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import { UserAuthContextProvider } from "./context/UserAuthContext.js";
 import Home from "./Components/pages/Home/Home.jsx";
-import LandingBackup from "./Components/pages/Landing/LandingBackup";
+import Landing from "./Components/pages/Landing/Landing";
 import Chat from "./Components/pages/Chat/Chat.jsx";
-import LandingRegister from "./Components/pages/Landing/Register/LandingRegister";
 
 function App() {
   return (
@@ -20,8 +19,8 @@ function App() {
       <LocalizationProvider dateAdapter={AdapterMoment}>
         <UserAuthContextProvider>
           <Routes>
-            <Route path="/" element={<LandingBackup />} />
-            <Route path="/signup" element={<LandingBackup />} />
+            <Route path="/" element={<Landing />} />
+            <Route path="/signup" element={<Landing />} />
             <Route
               path="/chat"
               element={

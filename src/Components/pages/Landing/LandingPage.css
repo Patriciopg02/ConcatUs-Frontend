@@ -3,47 +3,55 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 100vh;
+    min-width: 100vw;
+    height: 100vh;
+    width: 100vw;
 }
 
 .landing .form {
     position: absolute;
-    width: 350px;
-    height: fit-content;
+    width: 25vw;
+    height: 32vw;
     top:30%;
     right: 8%;
-    border-radius: 25px;
-    padding-left: 80px;
-    padding-bottom: 20px;
+    border-radius: 1.5vw;
+    padding: 3vw;
+    padding-top: 0vw;
     background-color: gainsboro;
-    border: 1px solid rgb(194, 194, 194);
+    border: .1vw solid rgb(194, 194, 194);
+}
+
+.landing .bottomButtons {
+    margin-left: 6.5vw;
+    margin-top: 0vw;
+    font-size: .7vw;
+}
+
+.landing .GoogleButton {
+    margin-top: 1vw;
+    margin-left: 2.6vw;
+    max-width: 13vw;
+    min-width: 13vw;
 }
 
 .landing #logoLanding {
     position: absolute;
-    width: 300px;
-    height: 90px;
-    top: 3%;
-    right: 10%;
-}
-
-#or {
-    margin-left: 30px;
+    width: 16vw;
+    height: 5vw;
+    top: 5%;
+    right: 12%;
 }
 
 #changeForm {
-    width: 80px;
-}
-
-#logoLanding {
- width: 250px;
- height: 250px;
+    width: 5vw;
 }
 
 .ReviewContainer {
     position: absolute;
     font-family: 'Nunito';
-    width: 600px;
-    height: 550px;
+    width: 47vw;
+    height: 43vw;
     top: 7%;
     left: 5%;
     display: flex;
@@ -52,17 +60,23 @@
 }
 
 .ReviewContainer #ReviewCard0 {
+    min-width: 10vw;
     width: fit-content;
     word-wrap: break-word;
+    border-radius: 2vw;
 }
 .ReviewContainer #ReviewCard1 {
+    min-width: 10vw;
     width: fit-content;
-    margin-left: 300px;
+    margin-left: 30vw;
     word-wrap: break-word;
+    border-radius: 2vw;
 }
 .ReviewContainer #ReviewCard2 {
+    min-width: 10vw;
     width: fit-content;
     word-wrap: break-word;
+    border-radius: 2vw;
 }
 
 #TitleReviews {
@@ -70,18 +84,52 @@
     left: 35%;
     top: -10%;
     font-family: 'Nunito';
-    font-size: 19px;
+    font-size: 1.8vw;
     font-weight: bold;
-    border-bottom: 1px solid #2a2a2a;
+    background-color: yellow;
+    padding: .5vw;
+    border-radius: 2vw;
+    border-bottom: .1vw solid #2a2a2a;
     color: #2a2a2a;
-    height: 25px;
 }
 
 @media (max-width:600px) {
     .landing .carousel {
         display: none;
     }
-    .landing .Title {
-        right: 30%;
+    .landing .ReviewContainer {
+        display: none;
+    }
+    .landing .form {
+        position: relative;
+        width: 75vw;
+        height: 72vh;
+        top:20%;
+        left: 12%;
+        border-radius: 1.5vw;
+        padding: 3vw;
+    }
+    
+    .landing #logoLanding {
+        width: 60vw;
+        height: 20vw;
+        top: 5%;
+        right: 19%;
+    }
+    .landing .bottomButtons {
+        margin-left: 20vw;
+        margin-top: 0vw;
+        padding-right: 2vw;
+        padding-left: 2vw;
+        font-size: 3.5vw;
+    }
+    .landing #changeForm {
+        width: 30vw;
+    }
+    .landing .GoogleButton {
+        margin-top: 6vw;
+        margin-left: 4vw;
+        max-width: 60vw;
+        min-width: 60vw;
     }
 }

@@ -6,7 +6,7 @@ import './EventsMenu.css'
 export default function EventsMenu() {
     return (
 
-        window.location.href === `https://concat-us.vercel.app/home` ? (
+        window.location.href === `${process.env.REACT_APP_MY_FRONT_URL}/home` ? (
             <Card sx={{width:200, bgcolor:'custom.dark', borderRadius:3}}>
             <div className="eventsMenu">
                 <Typography sx={{fontFamily: 'Nunito', fontSize: 14,color:'primary.main'}} gutterBottom variant="h5" component="div">

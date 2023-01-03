@@ -40,7 +40,7 @@ const LandingRegister = () => {
 				 		errors.email = "Invalid E-mail. Example: example@example.com";
 				 	}
 			if (!input.password || !/^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/.test(input.password)){
-			  errors.password = "Invalid Password:  Min 8 characters, max. 15. At least one capital letter. At least one lowercase letter. At least one digit. No blanks.";
+			  errors.password = "8 char, max 15. 1 capital letter. 1 lowercase letter. 1 digit. No blanks.";
 			}
 			return errors;
 		  }
@@ -60,11 +60,12 @@ const LandingRegister = () => {
 
 
 	return (
-		<Grid className='loginForm' container sx={{fontFamily: 'Nunito'}}>
+		<Grid className='registerForm' container sx={{fontFamily: 'Nunito'}}>
 			<h1>Sign Up</h1>
 			<br />
 			<Grid item md={12}>
 			  <FormControl>
+			  	<InputLabel sx={{fontSize:'1vw'}} htmlFor='Username'>Username</InputLabel>
 				<Input 
 				type='Username'
 				id='Username'
@@ -72,12 +73,12 @@ const LandingRegister = () => {
 				name="username"
 				onChange={(e) => handleChange(e)}
 				aria-describedby='username-helper'/>
-				<FormHelperText sx={{mb:2, color:grey[400]}} id='username-helper'>Username</FormHelperText>
 			  </FormControl>
 			  {errors.username && <p className='error'>{errors.usermane}</p>}
 		  </Grid>
 			<Grid item md={12}>
 			  <FormControl>
+			  	<InputLabel sx={{fontSize:'1vw'}} htmlFor='email'>E-mail</InputLabel>	
 				<Input 
 				type='email'
 				id='email'
@@ -85,13 +86,13 @@ const LandingRegister = () => {
 				name="email"
 				onChange={(e) => handleChange(e)}
 				aria-describedby='email-helper'/>
-				<FormHelperText sx={{mb:2, color:grey[400]}} id='email-helper'>Your email</FormHelperText>
 			  </FormControl>
 			  {errors.email && <p className='error'>{errors.email}</p>}
 		  </Grid>
 			  <br/>
 			  <Grid item md={12} >
 				<FormControl>
+					<InputLabel sx={{fontSize:'1vw'}} htmlFor='pwd'>Password</InputLabel>
 					<Input 
 					type='password'
 					id='pwd'
@@ -99,17 +100,16 @@ const LandingRegister = () => {
 					name="password"
 					onChange={(e) => handleChange(e)}
 					aria-describedby='password-helper'/>
-					<FormHelperText sx={{mb:2, color:grey[400]}} id='password-helper'>Your password</FormHelperText>
 				  </FormControl>
 				  {errors.password && <p className='error'>{errors.password}</p>}
 			  </Grid>
 				<br/>
-				{Object.keys(errors).length === 0 ? (
+				{Object.keys(errors).length > 0 || (input.username === '' && input.email === '' && input.password === '') ? (
+					<Button variant='outlined' disabled={true}>Register</Button>
+				) : (
 					<Button variant='contained' onClick={(e) => handleSubmit(e)}>
 					Register
 				  	</Button>
-				) : (
-					<Button variant='outlined' disabled={true}>Register</Button>
 				)}
 		  </Grid>
 		  )
