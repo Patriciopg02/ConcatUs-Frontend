@@ -98,7 +98,7 @@ const LandingPage = () => {
         {window.location.href === `http://localhost:3000/` ?
         <LandingLogin /> : <LandingRegister/>
         }
-        {window.location.href === `http://localhost:3000/` ?
+        {window.location.href === `https://concat-us.vercel.app/` ?
             <Button id='changeForm' onClick={() => navigate('/signup')}>
             
         Register </Button> : <Button id='changeForm' onClick={() => navigate('/')}>
