@@ -31,7 +31,7 @@ export default function Reports({payload}) {
 
   return (
     <div className="container">
-      <Button sx={{color:'custom.dark'}} onClick={handleSubmit}>
+      <Button sx={{color:'custom.dark', fontSize:'.8vw'}} onClick={handleSubmit}>
         Add favorite
       </Button>
     </div>

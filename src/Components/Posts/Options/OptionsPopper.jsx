@@ -22,11 +22,11 @@ export default function OptionsPopper({payload}) {
   if (user.email === payload.author) {
     return (
       <div>
-        <IconButton sx={{bgcolor: 'custom.light'}} aria-describedby={id} onClick={handleClick}>
-          <MoreVertIcon sx={{color: 'primary.light'}}/>
+        <IconButton sx={{bgcolor: 'custom.light', minWidth:'1.8vw', minHeight:'1.8vw', maxHeight:'1.8vw', maxWidth:'1.8vw'}} aria-describedby={id} onClick={handleClick}>
+          <MoreVertIcon sx={{color: 'primary.light', minWidth:'1.8vw', minHeight:'1.8vw', maxHeight:'1.8vw', maxWidth:'1.8vw'}}/>
         </IconButton>
         <Popper id={id} open={open} anchorEl={anchorEl}>
-          <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }}>
+          <Box sx={{ border: '.2vw', p: '.1vw', bgcolor: 'background.paper' }}>
             <DeletePost payload={payload}/>
             <EditPost payload={payload}/>
           </Box>
@@ -37,11 +37,11 @@ export default function OptionsPopper({payload}) {
   else {
     return (
       <div>
-        <IconButton sx={{bgcolor: 'custom.light'}} aria-describedby={id} onClick={handleClick}>
-          <MoreVertIcon sx={{color: 'primary.light'}}/>
+        <IconButton sx={{bgcolor: 'custom.light', minWidth:'1.8vw', minHeight:'1.8vw', maxHeight:'1.8vw', maxWidth:'1.8vw'}} aria-describedby={id} onClick={handleClick}>
+          <MoreVertIcon sx={{color: 'primary.light',minWidth:'1.8vw', minHeight:'1.8vw', maxHeight:'1.8vw', maxWidth:'1.8vw'}}/>
         </IconButton>
         <Popper id={id} open={open} anchorEl={anchorEl}>
-          <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }}>
+          <Box sx={{ border: '.2vw', p: '.1vw', bgcolor: 'background.paper' }}>
             <Reports payload={payload}/>
             <Favorite payload = {payload}/>
           </Box>

@@ -81,7 +81,7 @@ const NavBar = () => {
             </Link>
           </div>
         
-          {window.location.href === `http://localhost:3000/events` ? (
+          {window.location.href === `${process.env.REACT_APP_MY_FRONT_URL}/events` ? (
             <TextField
               placeholder="Search events..."
               id="barrabusquedaEvents"

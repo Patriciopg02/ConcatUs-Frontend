@@ -46,12 +46,10 @@ export default function DeletePost({payload}) {
     <Card
       className="commentsList"
       sx={{
-        width: 500,
-        borderRadius: "15px",
+        borderRadius: "1vw",
         bgcolor: 'custom.main',
         fontFamily: "Nunito",
         color: 'primary.light',
-        maxHeight: 500
       }}
     >
       <CardContent>
@@ -59,16 +57,16 @@ export default function DeletePost({payload}) {
           <h2>Are you sure to delete the post?</h2>
           <IconButton
             id='closeIcon'
-            sx={{ width: "35px", height: "35px", top: "20px",
+            sx={{ width: "2vw", height: "2vw", top: "1vw",
             bgcolor:'custom.light' }}
             onClick={() => opencloseModal()}
           >
-            <CloseIcon sx={{pr:'1px'}}/>
+            <CloseIcon sx={{pr:'.1vw'}}/>
           </IconButton>
         </div>
-        <Button onClick={handleSubmit} sx={{mr:'15px'}} variant="outlined" color="error">
+        <Button onClick={handleSubmit} variant="outlined" color="error">
             Delete
-            <DeleteIcon fontSize="small" />
+            <DeleteIcon fontSize="1vw" />
         </Button>
         <Button onClick={opencloseModal} variant="outlined">Back</Button>
     </CardContent>
@@ -79,24 +77,21 @@ export default function DeletePost({payload}) {
     <Card
     className="commentsList"
     sx={{
-        width: 500,
-        borderRadius: "15px",
         bgcolor: 'custom.main',
         fontFamily: "Nunito",
         color: 'primary.light',
-        maxHeight: 500
     }}
     >
-    <CardContent sx={{fontSize:'13px'}}>
+    <CardContent>
         <div className="headerModal">
-        <h2>Post deleted succesfully</h2>
+        <h2>Post deleted successfully</h2>
         <IconButton
             id='closeIcon'
-            sx={{ width: "35px", height: "35px", top: "20px",
+            sx={{ width: "2vw", height: "2vw", top: "1vw",
             bgcolor:'custom.light' }}
             onClick={() => opencloseModal2()}s
         >
-            <CloseIcon sx={{pr:'1px'}}/>
+            <CloseIcon sx={{pr:'.1vw'}}/>
         </IconButton>
         </div>
     </CardContent>
@@ -105,7 +100,7 @@ export default function DeletePost({payload}) {
 
   return (
     <div className="container">
-      <Button sx={{color:red[800]}} onClick={() => opencloseModal()}>
+      <Button sx={{color:red[800], fontSize:'.8vw'}} onClick={() => opencloseModal()}>
         Delete
       </Button>
       <Modal open={modal} onClose={opencloseModal}>

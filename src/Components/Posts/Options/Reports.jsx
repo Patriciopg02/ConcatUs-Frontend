@@ -105,12 +105,9 @@ export default function Reports({payload}) {
     <Card
     className="commentsList"
     sx={{
-        width: 500,
-        borderRadius: "15px",
         bgcolor: 'custom.main',
         fontFamily: "Nunito",
         color: 'primary.light',
-        maxHeight: 500
     }}
     >
     <CardContent sx={{fontSize:'13px'}}>
@@ -131,7 +128,7 @@ export default function Reports({payload}) {
 
   return (
     <div className="container">
-      <Button sx={{color:'custom.dark'}} onClick={() => opencloseModal()}>
+      <Button sx={{color:'custom.dark', fontSize:'.8vw'}} onClick={() => opencloseModal()}>
         Report
       </Button>
       <Modal open={modal} onClose={opencloseModal}>

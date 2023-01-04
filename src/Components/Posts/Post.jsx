@@ -161,25 +161,25 @@ export default function Post({
       <br />
       <Card
         sx={{
-          width: 600,
           bgcolor: "custom.dark",
           fontFamily: "Nunito",
-          borderRadius: 3,
+          borderRadius: '.5vw',
           position: "relative",
         }}
         id='card'
       >
        <div className="userInfo"> <CardHeader
           subheader={timeDate}
-          subheaderTypographyProps={{ color: "white" }}
-          sx={{ pt: 0, pb: 0, mt: 1, color: "primary.main" }}
+          subheaderTypographyProps={{ color: "white", fontSize:'.8vw' }}
+          sx={{ pt: 0, pb: 0, mt: '.2vw', color: "primary.main" }}
           avatar={
             <Avatar
               imgProps={{ referrerPolicy: "no-referrer" }}
-              sx={{ bgcolor: "primary.light" }}
+              sx={{ bgcolor: "primary.light", minWidth:'2vw',minHeight:'2vw' }}
               src={User.avatar}
             ></Avatar>
           }
+          titleTypographyProps={{fontSize:'1vw'}}
           title={<Link to={"/profile/" + author}>{User.name}</Link>}
         /></div>
         <div className="optionsPopper"> <OptionsPopper payload={payload} /></div>
@@ -245,7 +245,8 @@ export default function Post({
             onChange={handleChangeComment}
           />
           <Button
-            sx={{ mb: '2px', fontFamily: "Nunito", color: "primary.dark", borderRadius:'12px' }}
+            id="postCommentButton"
+            sx={{ mb: '.2vw', fontFamily: "Nunito", color: "primary.dark", borderRadius:'1vw'}}
             variant="outlined"
             onClick={handleSubmmitComment}
           >

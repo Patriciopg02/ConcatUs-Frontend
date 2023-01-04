@@ -4,7 +4,7 @@
 }
 
 .navbar {
-    height: 67px;
+    height: 5vw;
 }
 .navbarMobile {
     height: 55px;
@@ -18,22 +18,22 @@
 }
 
 .Home .media-part .leftHome {
-    width: 300px;
+    width: 21vw;
     background-color: #242424;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 2vw;
 }
 .Home .media-part .rightHome {
-    width: 300px;
+    width: 21vw;
     background-color: #242424;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 2vw;
 }
 
 #buttonPost {

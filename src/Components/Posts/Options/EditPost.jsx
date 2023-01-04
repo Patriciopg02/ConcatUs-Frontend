@@ -51,12 +51,9 @@ export default function EditPost({payload}) {
         <Card
           className="postCreator"
           sx={{
-            width: 600,
-            borderRadius: "15px",
             bgcolor: 'custom.main',
             fontFamily: "Nunito",
             color: 'primary.light',
-            height:'320px'
           }}
         >
           <CardContent>
@@ -64,11 +61,11 @@ export default function EditPost({payload}) {
               <h2>Edit post</h2>
               <IconButton
                 id='closeIcon'
-                sx={{ width: "35px", height: "35px", top: "20px",
+                sx={{ width: "2vw", height: "2vw", top: "1vw",
                 bgcolor:'custom.light' }}
                 onClick={() => opencloseModal()}
               >
-                <CloseIcon sx={{pr:'1px'}}/>
+                <CloseIcon sx={{pr:'.050vw'}}/>
               </IconButton>
             </div>
             <div className="inputsdePost">
@@ -87,7 +84,7 @@ export default function EditPost({payload}) {
             <div align="right">
                 <Button 
                 id='Postbutton'
-                sx={{bgcolor:'secondary.main', fontFamily: "Nunito",
+                sx={{bgcolor:'secondary.main', fontFamily: "Nunito", margin: '.5vw',
                 color:'custom.dark'}} onClick={handleSubmit} variant='contained'>Post</Button>
             </div>
           </CardContent>
@@ -96,7 +93,7 @@ export default function EditPost({payload}) {
 
   return (
     <div className="container">
-      <Button sx={{color:'custom.dark'}} onClick={() => opencloseModal()}>
+      <Button sx={{color:'custom.dark', fontSize:'.8vw'}} onClick={() => opencloseModal()}>
         Edit
       </Button>
       <Modal open={modal} onClose={opencloseModal}>

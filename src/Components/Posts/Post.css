@@ -2,6 +2,13 @@
     display: inline-block;
     opacity: 90%;
 }
+
+#card {
+    min-width: 45vw;
+    max-width: 45vw;
+    min-height: 12vw;
+}
+
 .actionsPost ul {
     display: none;
     opacity: 0%;
@@ -10,12 +17,13 @@
     z-index: 1;
     color:white;
     font-family: 'Nunito';
+    font-size: .8vw;
     text-decoration:none;
     list-style: none;
-    padding: 10px;
-    border-radius: 10px;
-    bottom: 100px;
-    left: 5px;
+    padding: .5vw;
+    border-radius: .5vw;
+    bottom: 6vw;
+    left: .5vw;
 }
 .actionsPost ul #LikeTitle {
     text-align: center;
@@ -23,28 +31,33 @@
 }
 
 .actionsPost {
-    height: 23px;
+    height: 1.8vw;
 }
 
 .textLikes {
     color:#a5a5a5;
+    font-size: 1vw;
     cursor: pointer;
 }
 .textCommentarys {
     color:#a5a5a5;
+    font-size: 1vw;
 }
 .ButtonActionPost {
     color:#a5a5a5;
+    min-width: 1.2vw;
+    min-height: 1.2vw;
 }
 .ButtonActionPost:hover {
     color:#ffd000;
 }
 #OLikes {
+    font-size: 1vw;
     color:#a5a5a5;
 }
 .actionLikes {
     display: flex;
-    padding-right: 20px;
+    padding-right: 1.5vw;
 }
 
 .inputsdeComments {
@@ -54,24 +67,29 @@
 }
 
 .inputsdeComments #filled-multiline-static{
-  width: 450px;
+  width: 35vw;
   background-color: #3b3b3b;
-  border-radius: 15px;
-  margin-bottom:10px;
-  padding-bottom:10px;
+  border-radius: 1vw;
+  margin-bottom:.5vw;
+  padding-bottom:.5vw;
   color: white;
-  height: 15px;
+  height: 1vw;
 }
 
 .inputsdeComments label {
   color: #a5a5a5;
+  font-size: 1vw;
+}
+
+.inputsdeComments #postCommentButton {
+    font-size: 1vw;
 }
 
 .optionsPopper {
     display: flex;
     justify-content: right;
-    margin-top: -50px;
-    margin-right: 10px;
+    margin-top: -2.6vw;
+    margin-right: .5vw;
 }
 .banContainer {
     right:60px;
@@ -86,9 +104,10 @@
 
 #postText {
     padding: 0px;
-    padding-top: 5px;
-    padding-left: 15px;
+    padding-top: .5vw;
+    padding-left: 1vw;
     max-width: 95%;
+    font-size: 1vw;
     word-wrap: break-word;
 }
 
