@@ -34,15 +34,6 @@ export default function EventDetail() {
 		}
     
     useEffect(()=>{
-        const Config = {
-            method: 'get',
-            baseURL: `${process.env.REACT_APP_MY_API_URL}/users/email/${emailU}`,
-            headers: {
-              Authorization: `Bearer ${token}`
-            },
-          }
-        axios(Config).then(res => setProfileUser(res.data))
-
         dispatch(details(id,token))
         return()=>{
             dispatch(deleteDetails())
@@ -55,7 +46,6 @@ export default function EventDetail() {
                 window.location.href = window.location.href; 
             }, 1000)
 		}
-    // console.log(detail)
     function signOut() {
         logOut();
         localStorage.clear();
@@ -63,8 +53,8 @@ export default function EventDetail() {
 
     if(userP.enabled !== false) {
         if (detail?.length !== 0) {
-            console.log(detail);
             let date = detail.date.replace('T',' / ').substring(0,detail.date.length-6);
+            let author = detail.author.substring(0,detail.author.length-11)+'...';
             if(detail?.type === 'in-person') {
                 return (
                     <div className='EventDetailContainer'>
@@ -95,11 +85,13 @@ export default function EventDetail() {
                                     </Typography>
             
                                     <div className="right-namephoto">
-                                        <Avatar id='avatar' sx={{ bgcolor: yellow[500] }} src={detail?.avatar}></Avatar>
-            
-                                        <Typography id="h5" sx={{fontFamily: 'Nunito', fontSize: 16,color:'primary.light'}} gutterBottom variant="h5" component="div">
-                                            {detail?.username}
-                                        </Typography>
+                                        <Link to={`/profile/${detail?.author}`}>
+                                            <Avatar id='avatar' sx={{ bgcolor: yellow[500] }} src={detail?.avatar}></Avatar>
+                
+                                            <Typography id="h5" sx={{fontFamily: 'Nunito', fontSize: 15,color:'primary.light'}} gutterBottom variant="h5" component="div">
+                                                {author}
+                                            </Typography>
+                                        </Link>
                                     </div>
                                 </div>
             

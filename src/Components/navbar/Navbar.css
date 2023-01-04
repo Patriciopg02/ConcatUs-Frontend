@@ -16,6 +16,7 @@ a{
     background-color: #3b3b3b;
     min-height: 1vw;
     max-height: 1vw;
+    padding: .5vw;
 }
 .headerModal label{
     color:white;

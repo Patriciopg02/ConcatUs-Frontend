@@ -47,9 +47,9 @@ export default function EventCard({location,name,text,image,date,id,enabled,type
             </Typography>
             <CardMedia
                 component="img"
-                alt={image ?? "events"}
+                alt={image || "events"}
                 height="140"
-                image={image ?? 'https://images.squarespace-cdn.com/content/v1/5ca4ccae8dfc8c3d55b30c4b/1554485986869-KXBAG4G64H3FCQT7RYPJ/Events.jpg?format=2500w'}
+                image={image || 'https://images.squarespace-cdn.com/content/v1/5ca4ccae8dfc8c3d55b30c4b/1554485986869-KXBAG4G64H3FCQT7RYPJ/Events.jpg?format=2500w'}
             />
             <CardContent>
                 <Typography sx={{fontFamily: 'Nunito', color:'primary.light'}} gutterBottom variant="h5" component="div">

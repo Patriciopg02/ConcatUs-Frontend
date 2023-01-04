@@ -29,6 +29,7 @@ export default function EventList({events}) {
             <div className="List">
                 {
                     events?.map(e=>{
+                        // console.log(e);
                         if(userE.enabled){
                             switch(userE.role){
                                 case "admin":
@@ -39,7 +40,7 @@ export default function EventList({events}) {
                                 location={e.location}
                                 name={e.name}
                                 text={e.content}
-                                image={e.imageCloudinary}
+                                image={e.image}
                                 id={e._id}
                                 enabled={e.enabled}
                                 type={e.type}
@@ -54,7 +55,7 @@ export default function EventList({events}) {
                                 location={e.location}
                                 name={e.name}
                                 text={e.content}
-                                image={e.imageCloudinary}
+                                image={e.image}
                                 id={e._id}
                                 enabled={e.enabled}
                                 type={e.type}

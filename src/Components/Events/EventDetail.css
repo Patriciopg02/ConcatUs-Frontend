@@ -26,23 +26,23 @@
 }
 
 .right #createdby {
-    margin-left: 100px;
+    margin-left: 8vw;
 }
 
 .right-namephoto {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: .5vw;
 }
 
 .right-namephoto #h5 {
     margin-top: 10px;
     padding-top: 5px;
-    margin-right: 10px;
 }
 
 .right-namephoto #avatar {
-    margin-right: 10px;
+    margin-left: 3vw;
 }
 
 .text {
@@ -314,4 +314,24 @@
     .info2 #assistButton {
       margin-top: 20px;
     }
+
+    .right #createdby {
+      margin-left: 21vw;
+  }
+  
+  .right-namephoto {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: .5vw;
+  }
+  
+  .right-namephoto #h5 {
+      margin-top: 10px;
+      padding-top: 5px;
+  }
+  
+  .right-namephoto #avatar {
+      margin-left: 9vw;
+  }
   }

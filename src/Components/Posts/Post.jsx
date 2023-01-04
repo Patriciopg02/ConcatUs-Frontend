@@ -176,8 +176,9 @@ export default function Post({
           avatar={
             <Avatar
               imgProps={{ referrerPolicy: "no-referrer" }}
-              sx={{ bgcolor: "primary.light", minWidth:'2vw',minHeight:'2vw',maxWidth:'2vw',maxHeight:'2vw' }}
+              sx={{ bgcolor: "primary.light", minWidth:'3vw',minHeight:'3vw',maxWidth:'3vw',maxHeight:'3vw' }}
               src={User.avatar}
+              id='avatarPost'
             ></Avatar>
           }
           titleTypographyProps={{fontSize:13}}
