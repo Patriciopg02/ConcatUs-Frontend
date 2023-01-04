@@ -73,7 +73,8 @@ const NavBar = () => {
           justifyContent: "space-between",
           alignItems: "center",
         }}
-      >
+        id='ToolBar'
+      > 
         <Toolbar>
           <div>
             <Link to={"/home"}>
@@ -99,20 +100,20 @@ const NavBar = () => {
           <Donations />
 
           <Link to="/chat">
-            <IconButton color="secondary">
-              <ChatOutlinedIcon />
+            <IconButton  sx={{minWidth:'4vw',minHeight:'2vw',maxHeight:'2vw' ,maxWidth:'4vw',color: "secondary.main"}}>
+              <ChatOutlinedIcon sx={{minWidth:'2vw',minHeight:'2vw',maxHeight:'2vw' ,maxWidth:'2vw'}}/>
             </IconButton>
           </Link>
             
           <AboutUs/>
 
-          <IconButton color="secondary" onClick={signOut}>
-            <LogoutIcon />
+          <IconButton sx={{minWidth:'4vw',minHeight:'2vw',maxHeight:'2vw' ,maxWidth:'4vw',color: "secondary.main"}} onClick={signOut}>
+            <LogoutIcon sx={{minWidth:'2vw',minHeight:'2vw',maxHeight:'2vw' ,maxWidth:'2vw'}}/>
           </IconButton>
 
           <Link to={`/profile/${user.email}`}>
-            <Button sx={{ ml: "35px", borderRadius: "25px", height: 50 }}>
-              <Avatar src={AvatarImage}></Avatar>
+            <Button sx={{ borderRadius: "2.5vw", height: '3vw' ,width: '3vw'}}>
+              <Avatar sx={{minWidth:'3vw',minHeight:'3vw',maxHeight:'3vw' ,maxWidth:'3vw'}} src={AvatarImage}></Avatar>
             </Button>
           </Link>
         </Toolbar>

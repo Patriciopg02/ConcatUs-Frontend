@@ -22,8 +22,8 @@ export default function OptionsPopper({payload}) {
   if (user.email === payload.author) {
     return (
       <div>
-        <IconButton sx={{bgcolor: 'custom.light', minWidth:'1.8vw', minHeight:'1.8vw', maxHeight:'1.8vw', maxWidth:'1.8vw'}} aria-describedby={id} onClick={handleClick}>
-          <MoreVertIcon sx={{color: 'primary.light', minWidth:'1.8vw', minHeight:'1.8vw', maxHeight:'1.8vw', maxWidth:'1.8vw'}}/>
+        <IconButton className='iconButtonOptions' aria-describedby={id} onClick={handleClick}>
+          <MoreVertIcon className='iconPNGOptions' sx={{color: 'primary.light'}}/>
         </IconButton>
         <Popper id={id} open={open} anchorEl={anchorEl}>
           <Box sx={{ border: '.2vw', p: '.1vw', bgcolor: 'background.paper' }}>
@@ -37,8 +37,8 @@ export default function OptionsPopper({payload}) {
   else {
     return (
       <div>
-        <IconButton sx={{bgcolor: 'custom.light', minWidth:'1.8vw', minHeight:'1.8vw', maxHeight:'1.8vw', maxWidth:'1.8vw'}} aria-describedby={id} onClick={handleClick}>
-          <MoreVertIcon sx={{color: 'primary.light',minWidth:'1.8vw', minHeight:'1.8vw', maxHeight:'1.8vw', maxWidth:'1.8vw'}}/>
+        <IconButton className='iconButtonOptions' aria-describedby={id} onClick={handleClick}>
+          <MoreVertIcon className='iconPNGOptions' sx={{color: 'primary.light'}}/>
         </IconButton>
         <Popper id={id} open={open} anchorEl={anchorEl}>
           <Box sx={{ border: '.2vw', p: '.1vw', bgcolor: 'background.paper' }}>

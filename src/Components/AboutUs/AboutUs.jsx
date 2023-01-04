@@ -25,7 +25,7 @@ export default function AboutUs() {
   const [modal2, setModal2] = useState(false);
   const [change, setChange] = useState(false);
 
-  console.log(change)
+  // console.log(change)
 
   const [opinions, setOpinions] = useState([]);
   const { user } = useUserAuth();
@@ -383,11 +383,11 @@ export default function AboutUs() {
   return (
     <div className="container">
       <IconButton
-        sx={{ width: "35px" }}
         onClick={opencloseModal}
         color="secondary"
+        className='iconButton'
       >
-        <InfoIcon />
+        <InfoIcon className='iconPNG' color="secondary"/>
       </IconButton>
       <Modal open={modal} onClose={opencloseModal}>
         {change ? body2 : body}

@@ -234,7 +234,8 @@
     #DetailCard {
       top:7%;
       left: 4%;
-      width: 85%;
+      min-width: 90vw;
+      max-width: 90vw;
     }
 
     .infoEvent {

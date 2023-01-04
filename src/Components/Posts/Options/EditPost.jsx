@@ -61,8 +61,8 @@ export default function EditPost({payload}) {
               <h2>Edit post</h2>
               <IconButton
                 id='closeIcon'
-                sx={{ width: "2vw", height: "2vw", top: "1vw",
-                bgcolor:'custom.light' }}
+                sx={{ width: "35px", height: "35px", top: "20px",
+            bgcolor:'custom.light' }}
                 onClick={() => opencloseModal()}
               >
                 <CloseIcon sx={{pr:'.050vw'}}/>
@@ -93,7 +93,7 @@ export default function EditPost({payload}) {
 
   return (
     <div className="container">
-      <Button sx={{color:'custom.dark', fontSize:'.8vw'}} onClick={() => opencloseModal()}>
+      <Button sx={{color:'custom.dark', fontSize:12}} onClick={() => opencloseModal()}>
         Edit
       </Button>
       <Modal open={modal} onClose={opencloseModal}>

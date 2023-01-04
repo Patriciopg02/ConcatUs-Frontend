@@ -22,7 +22,7 @@ export default function Prem() {
   const opencloseModal = () => {
     setModal(!modal);
   };
-  console.log(user)
+  // console.log(user)
 
   const handleSubmit = () => {
     dispatch(Premium(user.email));
@@ -78,8 +78,8 @@ export default function Prem() {
 
   return (
     <div className="container">
-      <IconButton sx={{width:'35px'}} onClick={() => opencloseModal()}>
-        <PaidIcon sx={{ color: "secondary.main" }} />
+      <IconButton className='iconButton' color="secondary"  onClick={() => opencloseModal()}>
+        <PaidIcon className='iconPNG' color="secondary"/>
       </IconButton>
       <Modal open={modal} onClose={opencloseModal}>
         {body}

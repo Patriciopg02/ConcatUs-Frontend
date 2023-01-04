@@ -180,7 +180,7 @@ export default function CreatePost({profileUser}) {
         id="buttonPost"
         sx={{ bgcolor: "secondary.main" }}
       >
-        <PostAddOutlinedIcon sx={{ color: grey[800] }} />
+        <PostAddOutlinedIcon sx={{ color: grey[800], fontSize:'15' }} />
       </IconButton>
       <Modal open={modal} onClose={opencloseModal}>
         {body}

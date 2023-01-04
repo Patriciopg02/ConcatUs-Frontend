@@ -25,14 +25,16 @@
 .landing .bottomButtons {
     margin-left: 6.5vw;
     margin-top: 0vw;
-    font-size: .7vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: .9vw;
 }
 
 .landing .GoogleButton {
     margin-top: 1vw;
     margin-left: 2.6vw;
-    max-width: 13vw;
-    min-width: 13vw;
+    max-width: 15vw;
+    min-width: 15vw;
 }
 
 .landing #logoLanding {

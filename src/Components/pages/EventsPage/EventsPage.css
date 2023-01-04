@@ -4,10 +4,10 @@
 }
 
 .navbarEvents {
-    height: 67px;
+    min-height: 5vw;
+    max-height: 5vw;
 }
 .navbarMobileEvents {
-    height: 55px;
     display: none;
 }
 
@@ -18,41 +18,22 @@
 }
 
 .HomeEvents .media-part .leftHome {
-    width: 300px;
+    width: 21vw;
     background-color: #242424;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 2vw;
 }
 .HomeEvents .media-part .rightHome {
-    width: 300px;
+    width: 21vw;
     background-color: #242424;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 20px;
-}
-
-#buttonPost {
-    width: 55px;
-    height: 55px;
-    position: fixed;
-    border: 1px solid transparent;
-    bottom: 50px;
-    right: 50px;
-    transition: all 0.2s;
-}
-#buttonPost:hover {
-    cursor: pointer;
-    background-color: rgb(255, 208, 0);
-    border: 2px solid white;
-    width: 65px;
-    height: 65px;
-    bottom: 45px;
-    right: 45px;
+    padding-top: 2vw;
 }
 
 .HomeEvents .media-part .centerHome {

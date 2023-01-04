@@ -96,7 +96,7 @@ return (
                   enabled={p.enabled}
                   disable={p.disable}
                 />)
-                {console.log(profileUser)}
+                // {console.log(profileUser)}
                 default: return <></>
           }
             }else{

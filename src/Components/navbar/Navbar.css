@@ -8,22 +8,57 @@ a{
 }
 #barrabusquedaEvents {
     color:white;
-    border: 1px solid gray;
-    border-radius: 5px;
-    width: 150px;
+    border: .1vw solid gray;
+    border-radius: .5vw;
+    min-width: 12vw;
+    max-width: 12vw;
+    font-size: 1vw;
     background-color: #3b3b3b;
-    height: 10px;
-}
-#barrabusquedaEvents:hover {
-    border: 2px solid gray;
-    border-radius: 5px;
-    background-color: #4d4d4d;
+    min-height: 1vw;
+    max-height: 1vw;
 }
 .headerModal label{
     color:white;
 }
 
-#logoHome {
-    width: 210px;
-    padding-top: 5px;
+#ToolBar {
+    min-height:5vw;
+    max-height:5vw;
+    min-width:90vw;
+    max-width:90vw;
 }
+
+#logoHome {
+    width: 18vw;
+    padding-top: 0vw;
+}
+
+.iconButton {
+    min-width:4vw;
+    min-height:2vw;
+    max-height:2vw;
+    max-width:4vw;
+}
+  
+.iconPNG {
+    min-width:2vw;
+    min-height:2vw;
+    max-height:2vw;
+    max-width:2vw;
+}
+
+
+@media (max-width:600px) {
+    .iconButton {
+      min-width:8vw;
+      min-height:4vw;
+      max-height:4vw;
+      max-width:8vw;
+    }
+    .iconPNG {
+      min-width:6vw;
+      min-height:6vw;
+      max-height:6vw;
+      max-width:6vw;
+    }
+  }

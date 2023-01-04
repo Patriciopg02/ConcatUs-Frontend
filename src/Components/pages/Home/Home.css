@@ -1,13 +1,14 @@
 .Home {
     max-width: 100vw;
     min-height: 100vh;
+    background-color: #242424;
 }
 
 .navbar {
-    height: 5vw;
+    min-height: 5vw;
+    max-height: 5vw;
 }
 .navbarMobile {
-    height: 55px;
     display: none;
 }
 
@@ -37,22 +38,21 @@
 }
 
 #buttonPost {
-    width: 55px;
-    height: 55px;
+    min-width:4.5vw;
+    max-width: 4.5vw;
+    min-height: 4.5vw;
+    max-height:4.5vw;
     position: fixed;
-    border: 1px solid transparent;
-    bottom: 50px;
-    right: 50px;
+    border: .1vw solid transparent;
+    bottom: 5vw;
+    right: 5vw;
     transition: all 0.2s;
 }
 #buttonPost:hover {
     cursor: pointer;
     background-color: rgb(255, 208, 0);
-    border: 2px solid white;
-    width: 65px;
-    height: 65px;
-    bottom: 45px;
-    right: 45px;
+    border: .2vw solid white;
+    transform: scale(110%);
 }
 
 .pays #textComment {
@@ -120,10 +120,10 @@
     .Home {
         min-width: 100vw;
         min-height: 100vh;
+        max-height: 100vh;
     }
     .Home .media-part {
         min-width: 100vw;
-        min-height: 100vh;
         justify-content: center;
     }
     .Home .media-part .leftHome {
@@ -133,7 +133,10 @@
         display: none;
     }
     .Home .media-part .centerHome {
-        width: 360px;
+        display: flex;
+        justify-content: center;
+        min-width: 100vw;
+        max-width: 100vw;
     }
     .navbar {
         display: none;
@@ -151,5 +154,16 @@
         font-size: 15px;
         top: 20%;
         left: 12%;
+    }
+    #buttonPost {
+        min-width:15vw;
+        max-width: 15vw;
+        min-height: 15vw;
+        max-height:15vw;
+        position: fixed;
+        border: .1vw solid transparent;
+        bottom: 15vw;
+        right: 10vw;
+        transition: all 0.2s;
     }
 }

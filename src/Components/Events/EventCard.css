@@ -13,6 +13,10 @@
 
 @media (max-width:600px) {
     #EventCard {
-        width: 350px;
+        min-width: 78vw;
+        max-width: 78vw;
+        min-height: 25vw;
+        border-radius: 2vw;
+        margin-right: 2vw;
     }
 }

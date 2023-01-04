@@ -110,7 +110,7 @@ export default function Reports({payload}) {
         color: 'primary.light',
     }}
     >
-    <CardContent sx={{fontSize:'13px'}}>
+    <CardContent sx={{fontSize:13}}>
         <div className="headerModal">
         <h2>This post will no longer appear in your feed, ty.</h2>
         <IconButton
@@ -128,7 +128,7 @@ export default function Reports({payload}) {
 
   return (
     <div className="container">
-      <Button sx={{color:'custom.dark', fontSize:'.8vw'}} onClick={() => opencloseModal()}>
+      <Button sx={{color:'custom.dark', fontSize:12}} onClick={() => opencloseModal()}>
         Report
       </Button>
       <Modal open={modal} onClose={opencloseModal}>

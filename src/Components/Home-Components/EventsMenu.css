@@ -1,16 +1,22 @@
+#ShowEventsMenu {
+    width: 15vw;
+    border-radius: 1vw;
+}
+
 .eventsMenu {
     display: flex;
-    margin-bottom: 4px;
+    margin-bottom: .4vw;
     justify-content: center;
     align-items: center;
-    padding-top: 4px;
+    padding-top: .4vw;
 }
 
 .buttons #assistButton {
-    margin-bottom: 15px;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-bottom: 1vw;
+    margin-left: .8vw;
+    margin-right: .8vw;
     font-weight: bold;
+    border-radius: 1vw;
 }
 .buttons #assistButton:hover {
     background-color: #ffec95;

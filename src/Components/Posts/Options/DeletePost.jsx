@@ -57,7 +57,7 @@ export default function DeletePost({payload}) {
           <h2>Are you sure to delete the post?</h2>
           <IconButton
             id='closeIcon'
-            sx={{ width: "2vw", height: "2vw", top: "1vw",
+            sx={{ width: "35px", height: "35px", top: "20px",
             bgcolor:'custom.light' }}
             onClick={() => opencloseModal()}
           >
@@ -100,7 +100,7 @@ export default function DeletePost({payload}) {
 
   return (
     <div className="container">
-      <Button sx={{color:red[800], fontSize:'.8vw'}} onClick={() => opencloseModal()}>
+      <Button sx={{color:red[800], fontSize:12}} onClick={() => opencloseModal()}>
         Delete
       </Button>
       <Modal open={modal} onClose={opencloseModal}>

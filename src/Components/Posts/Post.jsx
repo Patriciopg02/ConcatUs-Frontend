@@ -168,18 +168,19 @@ export default function Post({
         }}
         id='card'
       >
-       <div className="userInfo"> <CardHeader
+       <div className="userInfo"> 
+       <CardHeader
           subheader={timeDate}
-          subheaderTypographyProps={{ color: "white", fontSize:'.8vw' }}
+          subheaderTypographyProps={{ color: "white", fontSize:12 }}
           sx={{ pt: 0, pb: 0, mt: '.2vw', color: "primary.main" }}
           avatar={
             <Avatar
               imgProps={{ referrerPolicy: "no-referrer" }}
-              sx={{ bgcolor: "primary.light", minWidth:'2vw',minHeight:'2vw' }}
+              sx={{ bgcolor: "primary.light", minWidth:'2vw',minHeight:'2vw',maxWidth:'2vw',maxHeight:'2vw' }}
               src={User.avatar}
             ></Avatar>
           }
-          titleTypographyProps={{fontSize:'1vw'}}
+          titleTypographyProps={{fontSize:13}}
           title={<Link to={"/profile/" + author}>{User.name}</Link>}
         /></div>
         <div className="optionsPopper"> <OptionsPopper payload={payload} /></div>

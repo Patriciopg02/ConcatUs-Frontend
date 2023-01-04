@@ -81,34 +81,34 @@ const NavBarMobile = () => {
               <img id='logoHomeMobile' src={logochico} alt='logo'/>
             </Link>
             {
-              window.location.href === `http://localhost:3000/events` ? (
+              window.location.href === `${process.env.REACT_APP_MY_FRONT_URL}/` ? (
                 null ) : (<IconButton>
                             <Searchbar/>
                           </IconButton>)
             }
             <Link to={"/events"}>
-              <IconButton sx={{width:'35px'}} color="secondary">
-                <EventNoteIcon/>
+              <IconButton className='iconButton' color="secondary">
+                <EventNoteIcon className='iconPNG' color="secondary"/>
               </IconButton>
             </Link>
             <Prem/>
             <Donations />
 
             <Link to="/chat">
-              <IconButton sx={{width:'35px'}} color="secondary">
-                <ChatOutlinedIcon />
+              <IconButton className='iconButton' color="secondary">
+                <ChatOutlinedIcon className='iconPNG' color="secondary"/>
               </IconButton>
             </Link>
             
             <AboutUs/>
 
-            <IconButton sx={{width:'35px'}} color="secondary" onClick={signOut}>
-              <LogoutIcon />
+            <IconButton className='iconButton' color="secondary" onClick={signOut}>
+              <LogoutIcon className='iconPNG' color="secondary"/>
             </IconButton>
 
             <Link to={`/profile/${user.email}`}>
-              <Button sx={{ borderRadius: "25px", height: 50 }}>
-                <Avatar src={AvatarImage}></Avatar>
+              <Button sx={{minWidth:'8vw',minHeight:'4vw',maxHeight:'4vw' ,maxWidth:'8vw', borderRadius:'2.5vw'}}>
+                <Avatar sx={{minWidth:'7vw',minHeight:'7vw',maxHeight:'7vw' ,maxWidth:'7vw'}} src={AvatarImage}></Avatar>
               </Button>
             </Link>
           </Toolbar>

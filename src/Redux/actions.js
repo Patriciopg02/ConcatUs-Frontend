@@ -117,7 +117,7 @@ export function Donate( data , email) {
 }
 
 export function Premium(data) {
-  console.log(data);
+  // console.log(data);
   return async function () {
     const Config = {
       method: "post",

@@ -1,5 +1,9 @@
 .container #ButtonActionPost {
     color:#a5a5a5;
+    min-width: 1.8vw;
+    min-height: 1.8vw;
+    max-width: 1.8vw;
+    max-height: 1.8vw;
 }
 .container #ButtonActionPost:hover {
     color:#ffd000;
@@ -51,11 +55,11 @@
 
 @media (max-width:600px) {
     .commentsList {
-        width: 350px;
-        max-height: 400px;
+        width: 70vw;
+        max-height: 100vw;
     }
     #commentCard {
-        width: 300px;
+        width: 60vw;
         height: fit-content;
     }
     #textComment {
@@ -67,5 +71,11 @@
         word-wrap: break-word;
         margin-bottom: 5px;
         font-size: 15px;
+    }
+    .container #ButtonActionPost {
+        min-width: 4vw;
+        min-height: 4vw;
+        max-width: 4vw;
+        max-height: 4vw;
     }
 }

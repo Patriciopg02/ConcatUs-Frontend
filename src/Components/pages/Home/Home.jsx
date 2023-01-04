@@ -54,7 +54,6 @@ export default function Home() {
           <NavBarMobile />
           <span></span>
         </div>
-        <CreatePost />
         <div className="media-part">
           <div className="leftHome">
             <EventsMenu />
