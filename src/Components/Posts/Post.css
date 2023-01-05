@@ -53,6 +53,16 @@
 .ButtonActionPost:hover {
     color:#ffd000;
 }
+.ButtonActionPostLiked {
+    color:#ffd000;
+    min-width: 1.8vw;
+    min-height: 1.8vw;
+    max-width: 1.8vw;
+    max-height: 1.8vw;
+}
+.ButtonActionPostLiked:hover {
+    color:#a5a5a5;
+}
 #OLikes {
     font-size: 14px;
     color:#a5a5a5;

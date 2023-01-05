@@ -90,7 +90,7 @@ export default function FollowersModal({followers}) {
 
   return (
     <div className="container">
-      <p onClick={() => opencloseModal()} className="plusText">Followers</p>
+      <p onClick={() => opencloseModal()} className="plusText" style={{cursor:'pointer'}}>Followers</p>
       <Modal open={modal} onClose={opencloseModal}>
         {body}
       </Modal>

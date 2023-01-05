@@ -117,7 +117,7 @@ const ProfileInfo = ({ userInfoRen }) => {
             <p className="plusText">Events that will attend</p>
           </div>
         </div>
-        {!myUser ? <div></div> : <Follow email={userInfoRen.email} />}
+        {!myUser ? <div></div> : <Follow userFinded={userInfoRen} />}
       </div>
     </div>
   );

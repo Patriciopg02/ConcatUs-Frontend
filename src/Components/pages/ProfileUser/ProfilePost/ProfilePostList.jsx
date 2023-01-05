@@ -8,7 +8,7 @@ import EventsProfile from "../EventsProfile/EventsProfile";
 import FilterEventsProfile from "../EventsProfile/FilterEventsProfile";
 import './ProfilePostList.css';
 
-const ProfilePostList = ({render, posts, myUser}) => {
+const ProfilePostList = ({render, posts}) => {
   const dispatch = useDispatch();
   const {user} = useUserAuth();
   const [profileUser, setProfileUser] = useState({})
@@ -55,14 +55,16 @@ const ProfilePostList = ({render, posts, myUser}) => {
               case "user":
             if(p.enabled)return(
                 <Post
-                created={p.createdAt}
-                  text={p.content}
+                  key={p._id}
                   author={p.author}
+                  created={p.createdAt}
                   comments={p.comments}
                   likes={p.likes}
+                  text={p.content}
                   image={p.image}
                   id={p._id}
                   enabled={p.enabled}
+                  disable={p.disable}
                 />
             )
             default: return <></>
@@ -85,8 +87,8 @@ if(render ==="favorites"){
   return (
     <div className="postsProfile">
       <h2>Your Favorite Post</h2>
-      {console.log(myUser)}
-      {myUser?.liked?.map((p) => {
+      {console.log(profileUser)}
+      {profileUser?.liked?.map((p) => {
         switch(profileUser.role){
           case "admin":
             return (

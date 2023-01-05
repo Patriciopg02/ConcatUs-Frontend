@@ -28,6 +28,7 @@ export default function DeletePost({payload}) {
     setModal(!modal);
   };
   const opencloseModal2 = () => {
+    window.location.href = window.location.href;
     setModal2(!modal2);
   };
     

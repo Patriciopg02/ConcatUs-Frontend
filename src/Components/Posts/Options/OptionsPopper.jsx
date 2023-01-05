@@ -16,7 +16,7 @@ export default function OptionsPopper({payload}) {
   const handleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
   };
-
+  
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popper' : undefined;
   if (user.email === payload.author) {

@@ -22,7 +22,6 @@ const Profile = () => {
   const dispatch = useDispatch()
   const {user, logOut} = useUserAuth();
   let token = user.accessToken;
-  const myUser = useSelector(e=>e.myUser)
   const [profileUser, setProfileUser] = useState({})
   const [posts, setPosts] = useState([])
   let query = useParams();
@@ -92,7 +91,7 @@ if(userP.enabled !== false) {
             <Button variant="outlined"  sx={{ml:'5px', mr:'15px', mb:'15px', color:'secondary.main', border:'1px solid #ffd000'}} id='posts' onClick={handleClick}>Posts</Button>
             <Button variant="outlined"  sx={{ml:'5px', mr:'15px', mb:'15px', color:'secondary.main', border:'1px solid #ffd000'}} id='events' onClick={handleClick}>Events</Button>
             <Button variant="outlined"  sx={{ml:'5px', mr:'15px', mb:'15px', color:'secondary.main', border:'1px solid #ffd000'}} id='favorites' onClick={handleClick}>Favorites</Button>
-            <ProfilePostList render={render} posts={posts} myUser={myUser}/>
+            <ProfilePostList render={render} posts={posts} userP={userP}/>
           </div>
           <div className="rightHome">
             <ProfileDescription userInfoRen={profileUser}/>
@@ -111,7 +110,7 @@ if(userP.enabled !== false) {
               <Button variant="outlined"  sx={{ml:'5px', mr:'15px', mb:'15px', color:'secondary.main', border:'1px solid #ffd000'}} id='posts' onClick={handleClick}>Posts</Button>
               <Button variant="outlined"  sx={{ml:'5px', mr:'15px', mb:'15px', color:'secondary.main', border:'1px solid #ffd000'}} id='events' onClick={handleClick}>Events</Button>
               <Button variant="outlined"  sx={{ml:'5px', mr:'15px', mb:'15px', color:'secondary.main', border:'1px solid #ffd000'}} id='favorites' onClick={handleClick}>Favorites</Button>
-              <ProfilePostList render={render} posts={posts} myUser={myUser}/>
+              <ProfilePostList render={render} posts={posts} userP={userP}/>
             </div>
           </div>
         </div>

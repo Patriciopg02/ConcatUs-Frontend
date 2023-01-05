@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 import Follow from "../pages/Home/follow";
 import './Searchbar.css';
 
-export default function Searchbar({idPost}) {
+export default function Searchbar() {
   const [modal, setModal] = useState(false);
   const userE = JSON.parse(localStorage.getItem('user'));
   let users_finded = useSelector((state) => state.searchByNameUsers);
@@ -93,7 +93,7 @@ export default function Searchbar({idPost}) {
                         {
                             (userE.email===u.email)
                             ? <div></div>
-                            : <Follow email={u.email}/>
+                            : <Follow userFinded={ u }/>
                         }
                     </Card>
                     );

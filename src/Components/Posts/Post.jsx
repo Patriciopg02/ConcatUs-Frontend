@@ -21,7 +21,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import CommentsModal from "./Modals/CommentsModal";
 // import ChatBubbleOutlineRoundedIcon from "@mui/icons-material/ChatBubbleOutlineRounded";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { banPost, newComment, putLikes } from "../../Redux/actions";
 // import { updateComment } from "../../Redux/actions";
 import { Link, useParams } from "react-router-dom";
@@ -39,6 +39,8 @@ export default function Post({
   id,
   enabled,
 }) {
+
+  const userP = JSON.parse(window.localStorage.getItem("user"))
   const [User, setUser] = useState({ name: "", avatar: "" });
   const dispatch = useDispatch();
   const { user } = useUserAuth();
@@ -73,7 +75,6 @@ export default function Post({
         authorization: `Bearer ${token}`,
       },
     };
-
     if (created) {
       const parsedDate = new Date(Date.parse(created.toString()));
 
@@ -111,6 +112,7 @@ export default function Post({
       .catch(function (err) {
         console.log(err);
       });
+      console.log(userP);
   }, []);
 
   const putLike = () => {
@@ -206,9 +208,18 @@ export default function Post({
         <CardActions className="actionsPost">
             <div className="actionLikes">
 
-              <IconButton onClick={putLike}>
-                <ThumbUpOffAltIcon className="ButtonActionPost" />
-              </IconButton>
+              {
+                likes?.some((li) => li.name === userP.name ) &&
+                <IconButton onClick={putLike}>
+                  <ThumbUpOffAltIcon className="ButtonActionPostLiked"/>
+                </IconButton> ||
+
+                <IconButton onClick={putLike}>
+                  <ThumbUpOffAltIcon className="ButtonActionPost" />
+                </IconButton>
+              }
+              
+              
               {likes?.length !== 0 ? (
                 <div>
                   <p className="textLikes">{likes?.length} likes</p>

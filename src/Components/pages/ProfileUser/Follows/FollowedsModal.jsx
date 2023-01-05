@@ -40,7 +40,7 @@ export default function FollowedsModal({followeds}) {
     >
       <CardContent>
         <div className="headerModal">
-          <h2>Followeds</h2>
+          <h2 style={{cursor:'pointer'}}>Followeds</h2>
           <IconButton
             id='closeIcon'
             sx={{ width: "35px", height: "35px", top: "20px",
@@ -77,7 +77,7 @@ export default function FollowedsModal({followeds}) {
                         {
                             (userE.email===u.email)
                             ? <div></div>
-                            : <Follow email={u.email}/>
+                            : <Follow userFinded={u}/>
                         }
                     </Card>
               )
@@ -90,7 +90,7 @@ export default function FollowedsModal({followeds}) {
 
   return (
     <div className="container">
-      <p onClick={() => opencloseModal()} className="plusText">Followeds</p>
+      <p onClick={() => opencloseModal()} className="plusText" style={{cursor:'pointer'}}>Followeds</p>
       <Modal open={modal} onClose={opencloseModal}>
         {body}
       </Modal>

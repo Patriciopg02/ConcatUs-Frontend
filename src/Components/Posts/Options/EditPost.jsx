@@ -44,7 +44,11 @@ export default function EditPost({payload}) {
           email: sessionUser.user.email
       }
       dispatch(editPost(data,token))
+      window.location.href = window.location.href;
       setModal(false);
+      // setTimeout(() => {
+      //   window.location.href = window.location.href;
+      // }, 1000)
     }
 
     const body = (

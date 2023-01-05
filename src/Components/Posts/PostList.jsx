@@ -8,6 +8,8 @@ import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component"
 import { useDispatch, useSelector } from "react-redux";
 import { paginate } from "../../Redux/actions";
+
+
 export default function PostList() {
   const dispatch =  useDispatch()
   const {user} = useUserAuth();
@@ -16,6 +18,7 @@ export default function PostList() {
   const all_posts = useSelector(e=>e.posts)
   const [post, setPost]= useState([])
   let token = user.accessToken;
+
   useEffect(() => {
     const Config = {
       method: "post",
@@ -40,10 +43,12 @@ export default function PostList() {
     }
     axios(Config2).then(res => setProfileUser(res.data))
   }, [])
+
   useEffect(()=>{
     dispatch(paginate(token,page))
     setPost(post?.concat(all_posts))
   },[page])
+  
 return (
   <InfiniteScroll 
   dataLength={post?.length} 
