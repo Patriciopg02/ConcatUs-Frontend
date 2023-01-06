@@ -20,6 +20,7 @@ export default function ParticipantsModal({participants}) {
   const [modal, setModal] = useState(false);
   const userE = JSON.parse(localStorage.getItem('user'));
   const sessionUser = useUserAuth();
+  // console.log(participants);
 
   const opencloseModal = () => {
     setModal(!modal);
@@ -72,8 +73,8 @@ export default function ParticipantsModal({participants}) {
                         /></Link>
                         {
                             (userE.email===u.email)
-                            ? <div></div>
-                            : <Follow email={u.email}/>
+                            ? <></>
+                            : <Follow userFinded={u}/>
                         }
                     </Card>
               )

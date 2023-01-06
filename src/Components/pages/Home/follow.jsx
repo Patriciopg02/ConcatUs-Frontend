@@ -21,7 +21,7 @@ export default function Follow({userFinded}){
         dispatch(follows(info,token))
     }
     
-    console.log(userFinded)
+    // console.log(userFinded)
     if(userFinded?.followeds?.some(u => u.email === userEmail)) {
         return(
             <IconButton id='buttonsPost' onClick={handleFollow}>
