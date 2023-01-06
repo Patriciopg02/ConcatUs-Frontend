@@ -74,11 +74,11 @@ export default function FollowersModal({followers}) {
                         }
                         title={u.name}
                         /></Link>
-                        {
+                        {/* {
                             (userE.email===u.email)
                             ? <div></div>
                             : <Follow email={u.email}/>
-                        }
+                        } */}
                     </Card>
               )
             }
